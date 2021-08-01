@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script>
+      function getRemoteResource() {
+        fetch('http://127.0.0.1:8081/resource')
+          .then(result => {alert('it worked!');})
+          .catch(error => {
+            // error handling here
+            alert('Nope.');
+          })
+      }
+    </script>
+  </head>
+  <body>
+    <h1> CORS Demo </h1> 
+    <p>Click the button to test access to a cross origin resource!<p>
+    <button onclick="getRemoteResource();" type="button">Test!</button>
+    <div id=replyzone>
+    </div>
+  </body>
+</html>
